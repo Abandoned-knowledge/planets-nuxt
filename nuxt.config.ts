@@ -8,4 +8,9 @@ export default defineNuxtConfig({
     pages: "pages",
   },
   i18n: {},
+  tailwindcss: {
+    cssPath: ["~/app/style/tailwind.css", { injectPosition: "first" }],
+    viewer: false,
+    quiet: true,
+  },
 });
