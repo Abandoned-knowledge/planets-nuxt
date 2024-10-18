@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   dir: {
     layouts: "app/layouts",
   },
+  ssr: false,
   i18n: {
     vueI18n: "./i18n.config.ts",
   },
