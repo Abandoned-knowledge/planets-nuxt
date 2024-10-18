@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-primary;
+  }
+  @font-face {
+    font-family: "project_space";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("@/app/fonts/Project_Space.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "neuropol";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("@/app/fonts/neuropol_x.ttf") format("truetype");
+  }
+}

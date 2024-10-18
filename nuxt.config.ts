@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxtjs/i18n"],
   srcDir: "./src",
   dir: {
-    pages: "pages",
+    layouts: "app/layouts",
   },
   i18n: {
     vueI18n: "./i18n.config.ts",
