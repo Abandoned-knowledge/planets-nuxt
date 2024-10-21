@@ -1,6 +1,24 @@
 {
-    "welcome": "welcome",
-    "planets": {
-        "mars": "Mars"
+    "planet_info_list": {
+        "radius": {
+            "title": "Radius",
+            "unit_measure": "km"
+        },
+        "weight": {
+            "title": "Weight",
+            "unit_measure": "kg"
+        },
+        "distance": {
+            "title": "Distance to the sun",
+            "unit_measure": "km"
+        },
+        "day_length": "Day length",
+        "satellite_count": "Satellite count",
+        "temperature": {
+            "title": "Temperature",
+            "from": "from",
+            "to": "to"
+        },
+        "description": "Description"
     }
 }

@@ -8,7 +8,10 @@ export default defineNuxtConfig({
     layouts: "app/layouts",
   },
   imports: {
-    dirs: ["shared/icons"],
+    dirs: ["shared/icons", "entities", "shared/types", "shared/utils"],
+  },
+  pinia: {
+    storesDirs: ["entities"],
   },
   ssr: false,
   i18n: {

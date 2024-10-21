@@ -1,18 +1,37 @@
 <script setup lang="ts">
-  const planets = ref<HTMLElement[]>([]);
+  import planetsList from "./model/planets";
+  const planetsRef = ref<HTMLElement[]>([]);
+  const planetStore = usePlanetStore();
 
   function handleClick(event: Event) {
     const target = event.target as HTMLElement;
     if (target.closest(".planet")) {
-      planets.value.forEach((planet) => planet.classList.remove("planet-selected"));
+      planetsRef.value.forEach((planet) => planet.classList.remove("planet-selected"));
       target.classList.add("planet-selected");
+    }
+  }
+
+  function normalizeScale(multiply: number) {
+    if (multiply >= 7) {
+      return multiply / 7;
+    } else if (multiply >= 3.5) {
+      return multiply / 3;
+    } else {
+      return multiply;
     }
   }
 </script>
 
 <template>
   <div @click="handleClick" class="slider mt-32 gap-5">
-    <div v-for="_ in 3" ref="planets" class="planet"></div>
+    <div
+      v-for="item in planetsList"
+      @click="planetStore.planet = item"
+      ref="planetsRef"
+      class="planet"
+      :style="`scale: ${normalizeScale(item.radius.multiply)}`"
+      :key="item.id"
+    ></div>
   </div>
 </template>
 

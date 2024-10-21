@@ -10,9 +10,9 @@
 
 <style lang="css" scoped>
   .frame {
-    @apply bg-primary relative flex aspect-square w-full items-center justify-center overflow-hidden;
+    @apply relative flex aspect-square w-full items-center justify-center overflow-hidden bg-primary;
     .frame__inner {
-      @apply bg-surface z-10 aspect-square w-[99%] overflow-hidden;
+      @apply z-10 aspect-square w-[99%] overflow-hidden bg-surface;
     }
     img {
       @apply rounded-full p-2;
@@ -20,7 +20,7 @@
     &::after,
     &::before {
       content: "";
-      @apply bg-surface absolute h-[70%] w-full;
+      @apply absolute h-[70%] w-full bg-surface;
     }
 
     &::before {

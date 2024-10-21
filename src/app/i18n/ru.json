@@ -1,6 +1,24 @@
 {
-    "welcome": "Добро пожаловать!",
-    "planets": {
-        "mars": "Марс"
+    "planet_info_list": {
+        "radius": {
+            "title": "Радиус",
+            "unit_measure": "км"
+        },
+        "weight": {
+            "title": "Масса",
+            "unit_measure": "кг"
+        },
+        "distance": {
+            "title": "Расстояние до солнца",
+            "unit_measure": "км"
+        },
+        "day_length": "Продолжительность дня",
+        "satellite_count": "Количество спутников",
+        "temperature": {
+            "title": "Температура",
+            "from": "от",
+            "to": "до"
+        },
+        "description": "Описание"
     }
 }
