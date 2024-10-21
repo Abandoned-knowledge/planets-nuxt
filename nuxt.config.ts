@@ -7,6 +7,9 @@ export default defineNuxtConfig({
   dir: {
     layouts: "app/layouts",
   },
+  imports: {
+    dirs: ["shared/icons"],
+  },
   ssr: false,
   i18n: {
     vueI18n: "./i18n.config.ts",

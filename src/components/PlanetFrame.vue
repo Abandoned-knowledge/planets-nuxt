@@ -10,7 +10,7 @@
 
 <style lang="css" scoped>
   .frame {
-    @apply bg-primary relative flex aspect-square w-[300px] items-center justify-center overflow-hidden;
+    @apply bg-primary relative flex aspect-square w-full items-center justify-center overflow-hidden;
     .frame__inner {
       @apply bg-surface z-10 aspect-square w-[99%] overflow-hidden;
     }

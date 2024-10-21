@@ -20,4 +20,17 @@
     font-display: swap;
     src: url("@/app/fonts/neuropol_x.ttf") format("truetype");
   }
+
+  .line {
+    @apply relative flex h-[1px] w-full items-center bg-primary;
+    &::after,
+    &::before {
+      content: "";
+      @apply absolute aspect-square w-[9px] rounded-full border border-primary bg-surface;
+    }
+
+    &::before {
+      @apply right-0;
+    }
+  }
 }

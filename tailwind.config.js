@@ -9,13 +9,15 @@ export default {
       primary: "#E2E2D2",
       secondary: "#767676",
       base: "#ffffff",
+      cold: "#4E56ED",
+      hot: "#E0312B",
     },
     container: {
       center: true,
     },
     fontFamily: {
       sans: ["neuropol, sans-serif"],
-      neuropol: ["project_space, sans-serif"],
+      title: ["project_space, sans-serif"],
     },
     extend: {},
   },
