@@ -14,7 +14,7 @@
 
   async function handlePlanetSwitch(obj: PlanetInfo) {
     planetStore.isChanged = true;
-    setTimeout(() => (planetStore.planet = obj), 300);
+    setTimeout(() => (planetStore.planet = obj), 600);
   }
 </script>
 

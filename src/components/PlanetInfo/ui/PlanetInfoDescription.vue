@@ -6,7 +6,7 @@
   <div class="overflow-hidden">
     <p
       :class="[
-        'mt-4 text-sm transition-all ease-in-out',
+        'text-balance py-4 text-sm transition-all ease-in-out',
         { 'translate-y-full': planetStore.isChanged },
       ]"
     >

@@ -5,6 +5,8 @@ export const usePlanetStore = defineStore("planet", () => {
   const planet = ref<PlanetInfo>(planets[0]);
   const isChanged = ref<boolean>(false);
 
+  watch(isChanged, () => setTimeout(() => (isChanged.value = false), 1000));
+
   const getDescription = computed(() =>
     locale.value == "ru" ? planet.value.description.ru : planet.value.description.en,
   );

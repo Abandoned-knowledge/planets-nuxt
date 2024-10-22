@@ -6,7 +6,10 @@
   <div class="overflow-hidden">
     <p
       ref="idContainer"
-      :class="['font-title text-xl transition-all', { '-translate-y-full': planetStore.isChanged }]"
+      :class="[
+        'font-title text-xl transition-all',
+        { '-translate-y-full delay-300': planetStore.isChanged },
+      ]"
     >
       {{ planetStore.getID }}
     </p>

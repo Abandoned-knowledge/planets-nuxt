@@ -19,6 +19,9 @@ export default {
       sans: ["neuropol, sans-serif"],
       title: ["project_space, sans-serif"],
     },
+    transitionDuration: {
+      DEFAULT: "500ms",
+    },
     extend: {},
   },
   plugins: [],

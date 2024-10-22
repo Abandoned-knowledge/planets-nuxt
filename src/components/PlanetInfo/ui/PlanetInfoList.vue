@@ -1,10 +1,5 @@
 <script setup lang="ts">
   const planetStore = usePlanetStore();
-
-  watch(
-    () => planetStore.isChanged,
-    () => setTimeout(() => (planetStore.isChanged = false), 300),
-  );
 </script>
 
 <template>
