@@ -48,7 +48,7 @@
     </li>
 
     <li class="text-secondary">
-      {{ $t("planet_info_list.temperature") }}:
+      {{ $t("planet_info_list.temperature.title") }}:
       <span class="text-primary">
         {{ $t("planet_info_list.temperature.from") }}
         <span class="text-cold">
