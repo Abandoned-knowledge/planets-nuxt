@@ -5,19 +5,10 @@
 
   function handleClick(event: Event) {
     const target = event.target as HTMLElement;
-    if (target.closest(".planet")) {
-      planetsRef.value.forEach((planet) => planet.classList.remove("planet-selected"));
-      target.classList.add("planet-selected");
-    }
-  }
 
-  function normalizeScale(multiply: number) {
-    if (multiply >= 7) {
-      return multiply / 7;
-    } else if (multiply >= 3.5) {
-      return multiply / 3;
-    } else {
-      return multiply;
+    if (target.closest(".planet") && target.parentElement) {
+      planetsRef.value.forEach((planet) => planet.classList.remove("planet-selected"));
+      target.parentElement.classList.add("planet-selected");
     }
   }
 </script>
@@ -29,9 +20,10 @@
       @click="planetStore.planet = item"
       ref="planetsRef"
       class="planet"
-      :style="`scale: ${normalizeScale(item.radius.multiply)}`"
       :key="item.id"
-    ></div>
+    >
+      <img :src="`/img/${item.name.en.toLowerCase()}.png`" :alt="item.name.en" />
+    </div>
   </div>
 </template>
 
@@ -45,7 +37,11 @@
   }
 
   .planet {
-    @apply relative flex aspect-square w-16 cursor-pointer justify-center rounded-full border-2 border-primary bg-surface;
+    @apply relative flex aspect-square w-24 cursor-pointer justify-center rounded-full transition-all;
+
+    &:hover {
+      @apply scale-110;
+    }
     &::after,
     &::before {
       content: "";
@@ -58,6 +54,10 @@
       &.planet-selected {
         @apply visible w-5 translate-y-0 border-b-2 border-r-2 border-accent opacity-100;
       }
+    }
+
+    &.planet-selected {
+      @apply scale-110;
     }
 
     &::after {

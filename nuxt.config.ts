@@ -2,10 +2,11 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxtjs/i18n"],
+  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxtjs/i18n", "@nuxt/icon"],
   srcDir: "./src",
   dir: {
     layouts: "app/layouts",
+    public: "../public",
   },
   imports: {
     dirs: ["shared/icons", "entities", "shared/types", "shared/utils"],
@@ -21,5 +22,15 @@ export default defineNuxtConfig({
     cssPath: ["~/app/style/tailwind.css", { injectPosition: "first" }],
     viewer: false,
     quiet: true,
+  },
+  icon: {
+    provider: "iconify",
+
+    customCollections: [
+      {
+        prefix: "v-icon",
+        dir: "./src/shared/icons",
+      },
+    ],
   },
 });
