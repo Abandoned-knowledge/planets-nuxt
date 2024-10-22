@@ -8,6 +8,10 @@ export const usePlanetStore = defineStore("planet", () => {
     locale.value == "ru" ? planet.value.description.ru : planet.value.description.en,
   );
 
+  const getName = computed(() =>
+    locale.value == "ru" ? planet.value.name.ru : planet.value.name.en,
+  );
+
   const getDayLength = computed(() => {
     const days = planet.value.day_length.days;
     const hours = planet.value.day_length.hours;
@@ -21,5 +25,5 @@ export const usePlanetStore = defineStore("planet", () => {
     ${minutes !== 0 ? showingMinutes : ""}
     `;
   });
-  return { planet, getDayLength, getDescription };
+  return { planet, getDayLength, getDescription, getName };
 });

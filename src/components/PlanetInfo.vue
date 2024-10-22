@@ -6,7 +6,7 @@
   <section>
     <p class="font-title text-xl">0{{ planetStore.planet.id }}</p>
     <div class="flex h-fit items-center gap-4">
-      <h1 class="font-title text-6xl">{{ planetStore.planet.name.en }}</h1>
+      <h1 class="font-title text-6xl">{{ planetStore.getName }}</h1>
       <div class="flex h-10 w-full flex-col justify-between">
         <hr v-for="_ in 4" class="w-full bg-primary text-primary" />
       </div>

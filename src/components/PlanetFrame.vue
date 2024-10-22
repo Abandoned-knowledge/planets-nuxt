@@ -1,30 +1,33 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  const planetStore = usePlanetStore();
+</script>
 
 <template>
-  <div class="frame animation-scale">
+  <div class="frame">
     <div class="frame__inner">
-      <img src="https://img.pikbest.com/origin/09/29/10/93EpIkbEsTdJ4.png!sw800" alt="planet" />
+      <img :src="`/img/${planetStore.planet.name.en}.png`" :alt="planetStore.planet.name.en" />
     </div>
   </div>
 </template>
 
 <style lang="css" scoped>
   .frame {
-    @apply relative flex aspect-square w-full items-center justify-center overflow-hidden bg-primary;
+    @apply relative inline-flex aspect-square max-h-[400px] min-w-[400px] items-center justify-center overflow-hidden bg-primary;
     .frame__inner {
-      @apply z-10 aspect-square w-[99%] overflow-hidden bg-surface;
+      @apply z-10 aspect-square w-[99%] overflow-hidden bg-surface p-10;
     }
-    img {
-      @apply rounded-full p-2;
-    }
+
     &::after,
     &::before {
-      content: "";
-      @apply absolute h-[70%] w-full bg-surface;
+      @apply absolute bg-surface content-[""];
+    }
+
+    &::after {
+      @apply h-[70%] w-full;
     }
 
     &::before {
-      @apply rotate-90;
+      @apply h-full w-[70%];
     }
   }
 
