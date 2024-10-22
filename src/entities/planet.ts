@@ -9,6 +9,8 @@ export const usePlanetStore = defineStore("planet", () => {
     locale.value == "ru" ? planet.value.description.ru : planet.value.description.en,
   );
 
+  const getID = computed(() => (planet.value.id > 10 ? planet.value.id : `0${planet.value.id}`));
+
   const getName = computed(() =>
     locale.value == "ru" ? planet.value.name.ru : planet.value.name.en,
   );
@@ -32,5 +34,6 @@ export const usePlanetStore = defineStore("planet", () => {
     getDayLength,
     getDescription,
     getName,
+    getID,
   };
 });
