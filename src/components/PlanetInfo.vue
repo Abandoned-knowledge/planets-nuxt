@@ -14,7 +14,16 @@
     <div class="line mt-8"></div>
     <PlanetInfoList class="mt-4" />
 
-    <p class="mt-4 text-sm">{{ planetStore.getDescription }}</p>
+    <div class="overflow-hidden">
+      <p
+        :class="[
+          'mt-4 text-sm transition-all ease-in-out',
+          { 'translate-y-full': planetStore.isChanged },
+        ]"
+      >
+        {{ planetStore.getDescription }}
+      </p>
+    </div>
 
     <div class="line mt-4"></div>
   </section>

@@ -3,6 +3,7 @@ import planets from "~/components/model/planets";
 export const usePlanetStore = defineStore("planet", () => {
   const { locale } = useI18n();
   const planet = ref<PlanetInfo>(planets[0]);
+  const isChanged = ref<boolean>(false);
 
   const getDescription = computed(() =>
     locale.value == "ru" ? planet.value.description.ru : planet.value.description.en,
@@ -25,5 +26,11 @@ export const usePlanetStore = defineStore("planet", () => {
     ${minutes !== 0 ? showingMinutes : ""}
     `;
   });
-  return { planet, getDayLength, getDescription, getName };
+  return {
+    planet,
+    isChanged,
+    getDayLength,
+    getDescription,
+    getName,
+  };
 });

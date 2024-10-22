@@ -11,13 +11,18 @@
       target.parentElement.classList.add("planet-selected");
     }
   }
+
+  async function handlePlanetSwitch(obj: PlanetInfo) {
+    planetStore.isChanged = true;
+    setTimeout(() => (planetStore.planet = obj), 300);
+  }
 </script>
 
 <template>
   <div @click="handleClick" class="slider mt-32 gap-5">
     <div
       v-for="item in planetsList"
-      @click="planetStore.planet = item"
+      @click="handlePlanetSwitch(item)"
       ref="planetsRef"
       class="planet"
       :key="item.id"
