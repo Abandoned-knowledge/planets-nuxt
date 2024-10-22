@@ -3,5 +3,5 @@
     <PlanetFrame />
     <PlanetInfo />
   </div>
-  <PlanetsSlider />
+  <Slider />
 </template>

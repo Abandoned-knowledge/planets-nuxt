@@ -1,4 +1,4 @@
-import planets from "~/components/model/planets";
+import planets from "~/components/Slider/model/planets";
 
 export const usePlanetStore = defineStore("planet", () => {
   const { locale } = useI18n();

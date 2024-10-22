@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import planetsList from "./model/planets";
+  import planetsList from "../model/planets";
   const planetsRef = ref<HTMLElement[]>([]);
   const planetStore = usePlanetStore();
 
