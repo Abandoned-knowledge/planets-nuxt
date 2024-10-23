@@ -4,30 +4,30 @@
   const planetsRef = ref<HTMLElement[]>([]);
   const planetStore = usePlanetStore();
 
-  function handleClick(event: Event) {
-    const target = event.target as HTMLElement;
-
-    if (target.closest(".planet") && target.parentElement) {
-      planetsRef.value.forEach((planet) => planet.classList.remove("planet-selected"));
-      target.parentElement.classList.add("planet-selected");
-    }
-  }
-
-  async function handlePlanetSwitch(obj: PlanetInfo) {
+  function handleClick(event: Event, obj: PlanetInfo) {
     if (!planetStore.isChanged) {
-      planetStore.isChanged = true;
-      setTimeout(() => (planetStore.planet = obj), planetStore.planetSliderDelay);
+      addPlanetStyle(event.currentTarget as HTMLElement);
+      switchPlanet(obj);
     }
   }
+
+  const addPlanetStyle = (target: HTMLElement) => {
+    planetsRef.value.forEach((planet) => planet.classList.remove("planet-selected"));
+    target.classList.add("planet-selected");
+  };
+
+  const switchPlanet = (obj: PlanetInfo) => {
+    planetStore.isChanged = true;
+    setTimeout(() => (planetStore.planet = obj), planetStore.planetSliderDelay);
+  };
 </script>
 
 <template>
   <SliderLoader />
-
-  <div @click="handleClick" class="slider mt-32 gap-5">
+  <div class="slider mt-32 gap-5">
     <div
       v-for="item in planetsList"
-      @click="handlePlanetSwitch(item)"
+      @click="handleClick($event, item)"
       ref="planetsRef"
       class="planet"
       :key="item.id"

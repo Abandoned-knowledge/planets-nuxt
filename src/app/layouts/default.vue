@@ -1,6 +1,6 @@
 <template>
   <HeaderBase />
-  <main class="container">
+  <main class="container relative">
     <slot />
   </main>
 </template>

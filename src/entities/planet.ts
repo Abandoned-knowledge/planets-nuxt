@@ -7,7 +7,14 @@ export const usePlanetStore = defineStore("planet", () => {
   const planetSliderDelay = ref<number>(600);
   const planetReturnStateDelay = ref<number>(1200);
 
-  watch(isChanged, () => setTimeout(() => (isChanged.value = false), planetReturnStateDelay.value));
+  watch(
+    () => isChanged.value,
+    (newValue) => {
+      if (newValue) {
+        setTimeout(() => (isChanged.value = false), planetReturnStateDelay.value);
+      }
+    },
+  );
 
   const getDescription = computed(() =>
     locale.value == "ru" ? planet.value.description.ru : planet.value.description.en,
