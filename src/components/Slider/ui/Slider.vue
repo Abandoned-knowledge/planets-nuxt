@@ -25,15 +25,15 @@
 <template>
   <SliderLoader />
   <div class="slider mt-32 gap-5">
-    <div
-      v-for="item in planetsList"
-      @click="handleClick($event, item)"
-      ref="planetsRef"
-      class="planet"
-      :key="item.id"
-    >
-      <img :src="`/img/${item.name.en.toLowerCase()}.png`" :alt="item.name.en" />
-    </div>
+    <template v-for="item in planetsList" :key="item.id">
+      <div
+        @click="handleClick($event, item)"
+        ref="planetsRef"
+        :class="['planet', { '!w-28': item.name.en == 'Saturn' }]"
+      >
+        <img :src="`/img/${item.name.en.toLowerCase()}.png`" :alt="item.name.en" />
+      </div>
+    </template>
   </div>
 </template>
 
@@ -47,7 +47,7 @@
   }
 
   .planet {
-    @apply duration-short relative flex aspect-square w-24 cursor-pointer justify-center rounded-full transition-all;
+    @apply duration-short relative flex aspect-square w-20 cursor-pointer justify-center rounded-full transition-all;
 
     &:hover {
       @apply scale-110;
