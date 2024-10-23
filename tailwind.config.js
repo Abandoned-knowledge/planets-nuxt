@@ -14,6 +14,7 @@ export default {
     },
     container: {
       center: true,
+      padding: "1rem",
     },
     fontFamily: {
       sans: ["neuropol, sans-serif"],

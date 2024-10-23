@@ -3,7 +3,10 @@
 </script>
 
 <template>
-  <div class="image-frame" :class="{ 'image-frame_collapse': planetStore.isChanged }">
+  <div
+    class="image-frame planet-frame-size"
+    :class="{ 'image-frame_collapse': planetStore.isChanged }"
+  >
     <img
       :src="`/img/${planetStore.planet.name.en}.png`"
       class="animation"
@@ -13,6 +16,17 @@
 </template>
 
 <style lang="css" scoped>
+  .image-frame {
+    @apply flex aspect-square items-center justify-center overflow-hidden border-b border-t border-transparent transition-all;
+
+    &.image-frame_collapse {
+      @apply h-0 max-h-0;
+    }
+    img {
+      @apply relative flex aspect-square items-center justify-center p-10;
+    }
+  }
+
   .animation {
     animation: animation 8s ease-in-out infinite forwards;
   }
@@ -33,17 +47,6 @@
 
     100% {
       scale: 1;
-    }
-  }
-
-  .image-frame {
-    @apply flex aspect-square h-[400px] max-h-[400px] w-[400px] min-w-[400px] items-center justify-center overflow-hidden border-b border-t border-transparent transition-all;
-
-    &.image-frame_collapse {
-      @apply h-0 max-h-0;
-    }
-    img {
-      @apply relative flex aspect-square max-h-[400px] w-[400px] min-w-[400px] items-center justify-center p-10;
     }
   }
 </style>

@@ -6,7 +6,7 @@
   <div class="flex h-fit items-center gap-4 overflow-hidden">
     <h1
       :class="[
-        'font-title text-6xl uppercase transition-all',
+        'text-title font-title uppercase transition-all',
         { '-translate-x-full': planetStore.isChanged },
       ]"
     >

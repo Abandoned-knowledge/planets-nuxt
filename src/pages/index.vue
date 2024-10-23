@@ -1,7 +1,10 @@
 <template>
-  <div class="mt-10 flex min-h-[425px] items-center justify-center gap-32">
+  <div
+    class="mt-10 flex min-h-[375px] flex-col items-center justify-center gap-8 md:flex-row md:gap-16 lg:min-h-[425px] xl:gap-32"
+  >
     <PlanetFrame />
     <PlanetInfo />
   </div>
-  <Slider />
+  <Slider class="order-first md:order-last" />
+  <div class="md:test-asd">hello</div>
 </template>

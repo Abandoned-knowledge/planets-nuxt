@@ -24,7 +24,7 @@
 
 <template>
   <SliderLoader />
-  <div class="slider mt-32 gap-5">
+  <div :class="['slider mt-20 gap-5 lg:mt-24 xl:mt-32', $attrs.class]">
     <template v-for="item in planetsList" :key="item.id">
       <div
         @click="handleClick($event, item)"
