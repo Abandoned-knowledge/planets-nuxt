@@ -3,44 +3,20 @@
 </script>
 
 <template>
-  <div class="frame">
-    <div class="frame__inner">
-      <img :src="`/img/${planetStore.planet.name.en}.png`" :alt="planetStore.planet.name.en" />
-    </div>
+  <div class="image-frame" :class="{ 'image-frame_collapse': planetStore.isChanged }">
+    <img :src="`/img/${planetStore.planet.name.en}.png`" :alt="planetStore.planet.name.en" />
   </div>
 </template>
 
 <style lang="css" scoped>
-  .frame {
-    @apply relative inline-flex aspect-square max-h-[400px] min-w-[400px] items-center justify-center overflow-hidden bg-primary;
-    .frame__inner {
-      @apply z-10 aspect-square w-[99%] overflow-hidden bg-surface p-10;
-    }
+  .image-frame {
+    @apply flex aspect-square h-[400px] max-h-[400px] w-[400px] min-w-[400px] items-center justify-center overflow-hidden border-b border-t border-transparent transition-all;
 
-    &::after,
-    &::before {
-      @apply absolute bg-surface content-[""];
+    &.image-frame_collapse {
+      @apply h-0 max-h-0;
     }
-
-    &::after {
-      @apply h-[70%] w-full;
-    }
-
-    &::before {
-      @apply h-full w-[70%];
-    }
-  }
-
-  .animation-scale {
-    /* animation: scale 0.3s forwards ease-in-out; */
-  }
-
-  @keyframes scale {
-    0% {
-      scale: 1;
-    }
-    100% {
-      scale: 0;
+    img {
+      @apply relative flex aspect-square max-h-[400px] w-[400px] min-w-[400px] items-center justify-center p-10;
     }
   }
 </style>

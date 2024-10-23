@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-10 flex gap-32">
+  <div class="mt-10 flex min-h-[450px] items-center justify-center gap-32">
     <PlanetFrame />
     <PlanetInfo />
   </div>
