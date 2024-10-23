@@ -5,6 +5,7 @@
 @layer base {
   body {
     @apply bg-surface text-primary;
+    background-image: url("/img/bg-grid.png");
   }
   @font-face {
     font-family: "project_space";
