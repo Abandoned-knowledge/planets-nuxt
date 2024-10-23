@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import SliderLoader from "./SliderLoader.vue";
   import planetsList from "../model/planets";
   const planetsRef = ref<HTMLElement[]>([]);
   const planetStore = usePlanetStore();
@@ -13,12 +14,16 @@
   }
 
   async function handlePlanetSwitch(obj: PlanetInfo) {
-    planetStore.isChanged = true;
-    setTimeout(() => (planetStore.planet = obj), 600);
+    if (!planetStore.isChanged) {
+      planetStore.isChanged = true;
+      setTimeout(() => (planetStore.planet = obj), planetStore.planetSliderDelay);
+    }
   }
 </script>
 
 <template>
+  <SliderLoader />
+
   <div @click="handleClick" class="slider mt-32 gap-5">
     <div
       v-for="item in planetsList"

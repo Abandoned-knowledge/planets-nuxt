@@ -4,8 +4,10 @@ export const usePlanetStore = defineStore("planet", () => {
   const { locale } = useI18n();
   const planet = ref<PlanetInfo>(planets[0]);
   const isChanged = ref<boolean>(false);
+  const planetSliderDelay = ref<number>(600);
+  const planetReturnStateDelay = ref<number>(1200);
 
-  watch(isChanged, () => setTimeout(() => (isChanged.value = false), 1000));
+  watch(isChanged, () => setTimeout(() => (isChanged.value = false), planetReturnStateDelay.value));
 
   const getDescription = computed(() =>
     locale.value == "ru" ? planet.value.description.ru : planet.value.description.en,
@@ -33,6 +35,8 @@ export const usePlanetStore = defineStore("planet", () => {
   return {
     planet,
     isChanged,
+    planetSliderDelay,
+    planetReturnStateDelay,
     getDayLength,
     getDescription,
     getName,

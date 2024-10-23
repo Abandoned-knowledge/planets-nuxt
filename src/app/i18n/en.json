@@ -20,5 +20,7 @@
             "to": "to"
         },
         "description": "Description"
-    }
+    },
+    "switching": "Switching...",
+    "complete": "Complete"
 }
