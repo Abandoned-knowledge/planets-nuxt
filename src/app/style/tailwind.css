@@ -3,9 +3,29 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --surface-color: #f5f5f5;
+    --accent-color: #41a822;
+    --primary-color: #14121d;
+    --secondary-color: #a0a0a0;
+    --cold-color: #2832f2;
+    --hot-color: #d61812;
+
+    @media (prefers-color-scheme: dark) {
+      --surface-color: #100d15;
+      --accent-color: #47f213;
+      --primary-color: #e2e2d2;
+      --secondary-color: #767676;
+      --cold-color: #4e56ed;
+      --hot-color: #e0312b;
+    }
+  }
   body {
     @apply bg-surface text-primary;
-    background-image: url("/img/bg-grid.png");
+    background-image: url("/img/bg-grid-light.png");
+    @media (prefers-color-scheme: dark) {
+      background-image: url("/img/bg-grid.png");
+    }
   }
   @font-face {
     font-family: "project_space";
@@ -27,7 +47,7 @@
     &::after,
     &::before {
       content: "";
-      @apply absolute aspect-square w-[9px] rounded-full border border-primary bg-surface;
+      @apply absolute aspect-square w-[9px] rounded-full bg-accent;
     }
 
     &::before {

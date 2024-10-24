@@ -14,7 +14,7 @@
     </h1>
     <div
       :class="[
-        'flex h-10 w-full flex-col justify-between transition-all',
+        'flex h-6 w-full flex-col justify-between transition-all xl:h-10',
         { 'translate-x-full': planetStore.isChanged },
       ]"
     >

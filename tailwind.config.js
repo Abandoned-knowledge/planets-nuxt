@@ -4,13 +4,12 @@ export default {
   theme: {
     colors: {
       transparent: "transparent",
-      surface: "#100D15",
-      accent: "#47F213",
-      primary: "#E2E2D2",
-      secondary: "#767676",
-      base: "#ffffff",
-      cold: "#4E56ED",
-      hot: "#E0312B",
+      surface: "var(--surface-color)",
+      accent: "var(--accent-color)",
+      primary: "var(--primary-color)",
+      secondary: "var(--secondary-color)",
+      cold: "var(--cold-color)",
+      hot: "var(--hot-color)",
     },
     container: {
       center: true,
