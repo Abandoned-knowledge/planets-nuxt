@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import SliderLoader from "./SliderLoader.vue";
+  import SliderLoader from "../../SliderLoader/ui/SliderLoader.vue";
   import planetsList from "../model/planets";
   const planetsRef = ref<HTMLElement[]>([]);
   const planetStore = usePlanetStore();
@@ -23,7 +23,7 @@
 </script>
 
 <template>
-  <SliderLoader />
+  <!-- <SliderLoader /> -->
   <div :class="['slider mt-20 gap-5 lg:mt-24 xl:mt-32', $attrs.class]">
     <template v-for="item in planetsList" :key="item.id">
       <div
@@ -47,7 +47,7 @@
   }
 
   .planet {
-    @apply duration-short relative flex aspect-square w-20 cursor-pointer justify-center rounded-full transition-all;
+    @apply relative flex aspect-square w-20 cursor-pointer justify-center rounded-full transition-all duration-short;
 
     &:hover {
       @apply scale-110;
@@ -55,7 +55,7 @@
     &::after,
     &::before {
       content: "";
-      @apply duration-short invisible absolute aspect-square w-3 border-b border-r border-primary opacity-0 transition-all;
+      @apply invisible absolute aspect-square w-3 border-b border-r border-primary opacity-0 transition-all duration-short;
 
       &:hover {
         @apply visible translate-y-0 opacity-100;

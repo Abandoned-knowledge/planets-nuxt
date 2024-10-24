@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="absolute -top-10 right-0 z-10 rounded-xl border border-accent px-4 py-3">
+  <div class="absolute right-0 z-10 rounded-xl border border-accent px-3 py-1">
     <p v-if="planetStore.isChanged" class="center flex items-center justify-center gap-2 text-sm">
       {{ $t("switching") }}
       <Icon
@@ -15,7 +15,7 @@
 
     <p v-else class="center flex items-center justify-center gap-2 text-sm">
       {{ $t("complete") }}
-      <Icon name="icon-park-solid:correct" class="scale-100 text-xl text-primary" />
+      <Icon name="icon-park-solid:correct" class="scale-100 text-primary" />
     </p>
   </div>
 </template>

@@ -4,9 +4,10 @@
 </script>
 
 <template>
-  <header class="container mt-10 flex justify-center gap-10">
+  <header class="container relative mt-10 flex justify-center gap-10">
     <HeaderBaseLangSwitcher />
     <HeaderBaseThemeSwitcher />
+    <SliderLoader />
   </header>
 </template>
 
