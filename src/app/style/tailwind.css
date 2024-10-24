@@ -42,12 +42,4 @@
   html {
     @apply text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px];
   }
-
-  .planet-frame-size {
-    @apply h-[300px] max-h-[300px] w-[300px] min-w-[300px] lg:h-[350px] lg:max-h-[350px] lg:w-[350px] lg:min-w-[350px] xl:h-[400px] xl:max-h-[400px] xl:w-[400px] xl:min-w-[400px];
-
-    img {
-      @apply max-h-[300px] w-[300px] min-w-[300px] lg:max-h-[350px] lg:w-[350px] lg:min-w-[350px] xl:max-h-[400px] xl:w-[400px] xl:min-w-[400px];
-    }
-  }
 }

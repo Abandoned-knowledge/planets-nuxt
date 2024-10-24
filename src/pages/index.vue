@@ -6,5 +6,4 @@
     <PlanetInfo />
   </div>
   <Slider class="order-first md:order-last" />
-  <div class="md:test-asd">hello</div>
 </template>
