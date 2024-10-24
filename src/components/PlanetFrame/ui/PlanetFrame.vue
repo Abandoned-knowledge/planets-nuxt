@@ -8,7 +8,7 @@
     :class="{ 'collapse-x image-frame-collapse': planetStore.isChanged }"
   >
     <img
-      :src="`/img/${planetStore.planet.name.en}.png`"
+      :src="`/img/${planetStore.planet.name.en.toLowerCase()}.png`"
       class="animation"
       :alt="planetStore.planet.name.en"
     />
