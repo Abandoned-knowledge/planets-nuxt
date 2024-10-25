@@ -33,7 +33,7 @@
       </li>
 
       <li class="text-secondary">
-        Время оборота:
+        {{ $t("planet_info_list.turnaround_time") }}
         <span class="text-primary">
           {{ planetStore.planet.rotation_period.days }}
           {{ planetStore.planet.rotation_period.hours }}
@@ -42,8 +42,20 @@
 
       <li class="text-secondary">
         {{ $t("planet_info_list.satellite_count") }}:
-        <span class="text-primary">
+        <span
+          :class="[
+            'text-primary',
+            { 'inline-flex items-center gap-3': planetStore.planet.satellite_count.count > 0 },
+          ]"
+        >
           {{ planetStore.planet.satellite_count.count }}
+          <button
+            v-if="planetStore.planet.satellite_count.count > 0"
+            @click="planetStore.toggleSatelliteList"
+            class="h-4 cursor-pointer"
+          >
+            <Icon name="majesticons:open" class="text-base text-accent" />
+          </button>
         </span>
       </li>
       <li class="text-secondary">

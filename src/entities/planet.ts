@@ -16,9 +16,20 @@ export const usePlanetStore = defineStore("planet", () => {
     },
   );
 
+  const getSatellites = computed(() =>
+    locale.value == "ru"
+      ? planet.value.satellite_count.names.map((item) => item.ru)
+      : planet.value.satellite_count.names.map((item) => item.en),
+  );
+
   const getDescription = computed(() =>
     locale.value == "ru" ? planet.value.description.ru : planet.value.description.en,
   );
+
+  function toggleSatelliteList() {
+    const dialog = document.getElementById("satellite-list") as HTMLDialogElement;
+    dialog.showModal();
+  }
 
   const getID = computed(() => (planet.value.id > 10 ? planet.value.id : `0${planet.value.id}`));
 
@@ -48,5 +59,7 @@ export const usePlanetStore = defineStore("planet", () => {
     getDescription,
     getName,
     getID,
+    getSatellites,
+    toggleSatelliteList,
   };
 });

@@ -12,6 +12,7 @@
             "title": "Расстояние до солнца",
             "unit_measure": "км"
         },
+        "turnaround_time": "Время оборота",
         "day_length": "Продолжительность дня",
         "satellite_count": "Количество спутников",
         "temperature": {

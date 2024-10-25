@@ -6,4 +6,6 @@
     <PlanetInfo />
   </div>
   <Slider class="order-first md:order-last" />
+
+  <SatelliteList />
 </template>

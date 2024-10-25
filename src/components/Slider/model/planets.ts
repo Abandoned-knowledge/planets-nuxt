@@ -20,7 +20,7 @@ export default [
       minutes: 0,
     },
     satellite_count: {
-      count: 1,
+      count: 0,
       names: [],
     },
     temperature: {
@@ -95,7 +95,12 @@ export default [
     },
     satellite_count: {
       count: 1,
-      names: ["Moon"],
+      names: [
+        {
+          en: "Moon",
+          ru: "Луна",
+        },
+      ],
     },
     temperature: {
       min: -88,
@@ -132,7 +137,16 @@ export default [
     },
     satellite_count: {
       count: 2,
-      names: ["Phobos", "Deimos"],
+      names: [
+        {
+          en: "Phobos",
+          ru: "Фобос",
+        },
+        {
+          en: "Deimos",
+          ru: "Деймос",
+        },
+      ],
     },
     temperature: {
       min: -153,
@@ -169,7 +183,60 @@ export default [
     },
     satellite_count: {
       count: 95,
-      names: ["Io", "Europa", "Ganymede", "Callisto"],
+      names: [
+        {
+          en: "Io",
+          ru: "Ио",
+        },
+        {
+          en: "Europa",
+          ru: "Европа",
+        },
+        {
+          en: "Ganymede",
+          ru: "Ганимед",
+        },
+        {
+          en: "Callisto",
+          ru: "Калисто",
+        },
+        {
+          en: "Amalthea",
+          ru: "Амальтея",
+        },
+        {
+          en: "Himalia",
+          ru: "Гималия",
+        },
+        {
+          en: "Elara",
+          ru: "Элара",
+        },
+        {
+          en: "Pasiphae",
+          ru: "Пасифая",
+        },
+        {
+          en: "Thebe",
+          ru: "Теба",
+        },
+        {
+          en: "Adrastea",
+          ru: "Адрастея",
+        },
+        {
+          en: "Metis",
+          ru: "Метида",
+        },
+        {
+          en: "Leda",
+          ru: "Леда",
+        },
+        {
+          en: "Callirrhoe",
+          ru: "Каллирхоя",
+        },
+      ],
     },
     temperature: {
       min: -145,
@@ -205,8 +272,93 @@ export default [
       minutes: 42,
     },
     satellite_count: {
-      count: 62,
-      names: ["Titan", "Rhea", "Iapetus"],
+      count: 118,
+      names: [
+        {
+          en: "Titan",
+          ru: "Титан",
+        },
+        {
+          en: "Rhea",
+          ru: "Рея",
+        },
+        {
+          en: "Iapetus",
+          ru: "Япет",
+        },
+        {
+          en: "Dione",
+          ru: "Диона",
+        },
+        {
+          en: "Tethys",
+          ru: "Тетис",
+        },
+        {
+          en: "Enceladus",
+          ru: "Энцелад",
+        },
+        {
+          en: "Mimas",
+          ru: "Мимас",
+        },
+        {
+          en: "Hyperion",
+          ru: "Гиперион",
+        },
+        {
+          en: "Pan",
+          ru: "Пан",
+        },
+        {
+          en: "Atlas",
+          ru: "Атлас",
+        },
+        {
+          en: "Prometheus",
+          ru: "Прометей",
+        },
+        {
+          en: "Pandora",
+          ru: "Пандора",
+        },
+        {
+          en: "Epimetheus",
+          ru: "Эпиметей",
+        },
+        {
+          en: "Janus",
+          ru: "Янус",
+        },
+        {
+          en: "Telesto",
+          ru: "Телесто",
+        },
+        {
+          en: "Calypso",
+          ru: "Калипсо",
+        },
+        {
+          en: "Helene",
+          ru: "Элене",
+        },
+        {
+          en: "Polydeuces",
+          ru: "Полидевки",
+        },
+        {
+          en: "Methone",
+          ru: "Метон",
+        },
+        {
+          en: "Anthe",
+          ru: "Антей",
+        },
+        {
+          en: "Pallene",
+          ru: "Паллен",
+        },
+      ],
     },
     temperature: {
       min: -178,
@@ -246,8 +398,117 @@ export default [
       minutes: 14,
     },
     satellite_count: {
-      count: 27,
-      names: ["Miranda", "Ariel", "Umbriel"],
+      count: 28,
+      names: [
+        {
+          en: "Ariel",
+          ru: "Ариэль",
+        },
+        {
+          en: "Umbriel",
+          ru: "Умбриэль",
+        },
+        {
+          en: "Titania",
+          ru: "Титания",
+        },
+        {
+          en: "Oberon",
+          ru: "Оберон",
+        },
+        {
+          en: "Miranda",
+          ru: "Миранда",
+        },
+        {
+          en: "Cordelia",
+          ru: "Корделия",
+        },
+        {
+          en: "Ophelia",
+          ru: "Офелия",
+        },
+        {
+          en: "Bianca",
+          ru: "Бианка",
+        },
+        {
+          en: "Cressida",
+          ru: "Крессида",
+        },
+        {
+          en: "Desdemona",
+          ru: "Джэззэбелла",
+        },
+        {
+          en: "Juliet",
+          ru: "Джульетта",
+        },
+        {
+          en: "Portia",
+          ru: "Порция",
+        },
+        {
+          en: "Rosalind",
+          ru: "Розалинда",
+        },
+        {
+          en: "Belinda",
+          ru: "Белинда",
+        },
+        {
+          en: "Puck",
+          ru: "Пук",
+        },
+        {
+          en: "Caliban",
+          ru: "Калибан",
+        },
+        {
+          en: "Sycorax",
+          ru: "Сикоракса",
+        },
+        {
+          en: "Prospero",
+          ru: "Просперо",
+        },
+        {
+          en: "Setebos",
+          ru: "Сетебос",
+        },
+        {
+          en: "Stephano",
+          ru: "Стефано",
+        },
+        {
+          en: "Trinculo",
+          ru: "Тринкуло",
+        },
+        {
+          en: "Francisco",
+          ru: "Франциско",
+        },
+        {
+          en: "Margaret",
+          ru: "Маргарет",
+        },
+        {
+          en: "Ferdinand",
+          ru: "Фердинанд",
+        },
+        {
+          en: "Perdita",
+          ru: "Пердита",
+        },
+        {
+          en: "Mab",
+          ru: "Мэб",
+        },
+        {
+          en: "Cupid",
+          ru: "Купидон",
+        },
+      ],
     },
     temperature: {
       min: -224,
@@ -291,17 +552,64 @@ export default [
       minutes: 6,
     },
     satellite_count: {
-      count: 14,
+      count: 16,
       names: [
-        "Triton",
-        "Proteus",
-        "Nereid",
-        "Larissa",
-        "Galatea",
-        "Despina",
-        "Thalassa",
-        "Hippocamp",
-        "Portunus",
+        {
+          en: "Triton",
+          ru: "Тритон",
+        },
+        {
+          en: "Nereid",
+          ru: "Нереида",
+        },
+        {
+          en: "Naiad",
+          ru: "Наяда",
+        },
+        {
+          en: "Thalassa",
+          ru: "Таласа",
+        },
+        {
+          en: "Despina",
+          ru: "Деспина",
+        },
+        {
+          en: "Galatea",
+          ru: "Галатея",
+        },
+        {
+          en: "Larissa",
+          ru: "Ларисса",
+        },
+        {
+          en: "Proteus",
+          ru: "Протей",
+        },
+        {
+          en: "Halimede",
+          ru: "Алимеда",
+        },
+        {
+          en: "Psamathe",
+          ru: "Псамафа",
+        },
+        {
+          en: "Sao",
+          ru: "Сао",
+        },
+        {
+          en: "Laomedeia",
+          ru: "Лаомедея",
+        },
+        {
+          en: "Neso",
+          ru: "Несо",
+        },
+        {
+          en: "Hippocamp",
+          ru: "Гиппокамп",
+        },
       ],
     },
     temperature: {

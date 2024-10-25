@@ -13,7 +13,7 @@ export interface PlanetInfo {
 
 interface SatelliteCount {
   count: number;
-  names: string[] | [];
+  names: Languages[] | [];
 }
 
 interface RotationPeriod {

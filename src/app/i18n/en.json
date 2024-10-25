@@ -12,6 +12,7 @@
             "title": "Distance to the sun",
             "unit_measure": "km"
         },
+        "turnaround_time": "Turnaround time",
         "day_length": "Day length",
         "satellite_count": "Satellite count",
         "temperature": {
