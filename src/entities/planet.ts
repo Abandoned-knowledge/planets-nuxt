@@ -4,7 +4,7 @@ export const usePlanetStore = defineStore("planet", () => {
   const { locale } = useI18n();
   const planet = ref<PlanetInfo>(planets[0]);
   const isChanged = ref<boolean>(false);
-  const planetSliderDelay = ref<number>(600);
+  const planetSliderDelay = ref<number>(800);
   const planetReturnStateDelay = ref<number>(1200);
 
   watch(

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import SliderLoader from "../../SliderLoader/ui/SliderLoader.vue";
   import planetsList from "../model/planets";
   const planetsRef = ref<HTMLElement[]>([]);
   const planetStore = usePlanetStore();
