@@ -4,10 +4,10 @@
 </script>
 
 <template>
-  <header class="container relative mt-10 flex justify-center gap-10">
-    <HeaderBaseLangSwitcher />
-    <HeaderBaseThemeSwitcher />
-    <SliderLoader />
+  <header class="container mt-10 grid grid-cols-[auto_auto] content-center gap-x-5 gap-y-7">
+    <SliderLoader class="col-span-2 mx-auto w-fit" />
+    <HeaderBaseLangSwitcher class="ml-auto w-fit" />
+    <HeaderBaseThemeSwitcher class="mr-auto w-fit" />
   </header>
 </template>
 
