@@ -23,8 +23,8 @@
 
 <template>
   <select @change="changeTheme" v-model="currentTheme" class="swither">
-    <option value="light">Light</option>
-    <option value="dark">Dark</option>
+    <option value="light">{{ $t("theme.light") }}</option>
+    <option value="dark">{{ $t("theme.dark") }}</option>
   </select>
 </template>
 

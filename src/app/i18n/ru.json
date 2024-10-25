@@ -23,5 +23,9 @@
         "description": "Описание"
     },
     "switching": "Переключение...",
-    "complete": "Успешно"
+    "complete": "Успешно",
+    "theme": {
+        "dark": "Тёмная",
+        "light": "Светлая"
+    }
 }

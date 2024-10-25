@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <header class="container mt-10 grid grid-cols-[auto_auto] content-center gap-x-5 gap-y-7">
+  <header class="container mt-10 grid grid-cols-[auto_auto] content-center gap-x-10 gap-y-7">
     <SliderLoader class="col-span-2 mx-auto w-fit" />
     <HeaderBaseLangSwitcher class="ml-auto w-fit" />
     <HeaderBaseThemeSwitcher class="mr-auto w-fit" />

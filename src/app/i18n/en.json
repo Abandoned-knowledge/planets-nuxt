@@ -23,5 +23,9 @@
         "description": "Description"
     },
     "switching": "Switching...",
-    "complete": "Complete"
+    "complete": "Complete",
+    "theme": {
+        "dark": "Dark",
+        "light": "Light"
+    }
 }
