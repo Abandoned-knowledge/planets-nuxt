@@ -27,5 +27,8 @@
     "theme": {
         "dark": "Dark",
         "light": "Light"
+    },
+    "actions": {
+        "close": "Close"
     }
 }

@@ -77,4 +77,12 @@
       @apply bg-primary text-surface;
     }
   }
+
+  .button {
+    @apply rounded-xl border border-accent px-6 py-2 uppercase text-primary transition-all duration-short;
+
+    &:hover {
+      @apply border-transparent bg-accent text-surface;
+    }
+  }
 }
